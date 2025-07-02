@@ -1,0 +1,27 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls",
+            "delegate_permission/common.get_login_creds"
+        ],
+        "target": {
+            "namespace": "web",
+            "site": [
+                "https://www.lbk.world"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls",
+            "delegate_permission/common.get_login_creds"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.superchain.lbankgoogle",
+            "sha256_cert_fingerprints": [
+                "7D:3B:2A:34:FA:CE:E5:14:EB:7F:99:CA:A2:2C:98:6E:B7:5E:CB:24:B8:38:67:FD:C8:48:58:AB:CA:51:67:C3"
+            ]
+        }
+    }
+]
