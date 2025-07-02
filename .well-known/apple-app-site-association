@@ -1,5 +1,9 @@
 {
-  "webcredentials": {
-    "apps": ["425MM7NUD2.com.kang.passkey-test"]
-  }
+	"webcredentials": {
+		"apps": [
+			"425MM7NUD2.com.kang.passkey-test",
+			"438AN8N48P.com.LBank.LBankNavApp",
+			"2P2W7CY684.com.LBank.WeiallenNavApp"
+		]
+	}
 }
