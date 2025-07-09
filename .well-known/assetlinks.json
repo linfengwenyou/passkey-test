@@ -7,7 +7,7 @@
         "target": {
             "namespace": "web",
             "site": [
-                "https://www.lbk.world"
+                "https://earnest-alpaca-0704f0.netlify.app"
             ]
         }
     },
