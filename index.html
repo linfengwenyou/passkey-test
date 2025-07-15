@@ -41,5 +41,35 @@
     点击打开 openinstall
   </a>
 
+
+ <a id="openAppLink" class="button" href="#"  style="display:inline-block; padding:12px 24px; background-color:#2106F3; color:white; text-decoration:none; border-radius:6px; font-size:16px;"
+ >点击打开 App</a>
+
+  <div class="tip">
+    如果点击无法唤起 App：<br/>
+    1. 请用 <strong>Safari</strong> 打开此页面<br/>
+    2. <strong>长按下方链接</strong>，选择 “在 App 中打开”<br/>
+    3. 或 <strong>复制链接</strong> 手动粘贴到 Safari 打开
+  </div>
+
+  <div style="margin-top: 30px;">
+    <a id="rawLink" href="https://earnest-alpaca-0704f0.netlify.app/product/12345" style="word-break: break-all;">
+      https://earnest-alpaca-0704f0.netlify.app/product/12345
+    </a>
+  </div>
+
+  <script>
+    const BASE_URL = "https://earnest-alpaca-0704f0.netlify.app/product/12345";
+
+    document.getElementById("openAppLink").addEventListener("click", function (e) {
+      // 加 query 参数，避免 Safari 缓存造成“网页优先”问题
+      const ts = Date.now();
+      const link = BASE_URL + "?ts=" + ts;
+      this.href = link;
+      document.getElementById("rawLink").href = link;
+      document.getElementById("rawLink").textContent = link;
+      // 不阻止默认行为，继续跳转
+    });
+  </script>
 </body>
 </html>
