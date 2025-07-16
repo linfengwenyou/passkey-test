@@ -29,9 +29,13 @@
 
   <h2>打开 App 示例</h2>
 
-  <a href="https://earnest-alpaca-0704f0.netlify.app/download/aa?route=lbank://temp"
+  <a href="https://earnest-alpaca-0704f0.netlify.app/download?route=lbank://temp"
      style="display:inline-block; padding:12px 24px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px; font-size:26px;">
-    点击打开 earnest
+    点击打开 download
+  </a>
+    <a href="https://earnest-alpaca-0704f0.netlify.app/appdownload?route=lbank://temp"
+     style="display:inline-block; padding:12px 24px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:6px; font-size:26px;">
+    点击打开 appdownload
   </a>
 
   <br/><br/>
@@ -41,24 +45,23 @@
     点击打开 product route
   </a>
 
-
- <a id="openAppLink" class="button" href="#"  style="display:inline-block; padding:12px 24px; background-color:#2106F3; color:white; text-decoration:none; border-radius:6px; font-size:26px;"
- >点击打开 App</a>
-
-  <div class="tip">
+ <a href="https://earnest-alpaca-0704f0.netlify.app/product/12345" style="display:inline-block; padding:12px 24px; background-color:#2106F3; color:white; text-decoration:none; border-radius:6px; font-size:26px;"
+ >点击打开 product</a>
+  <br/><br/>
+<!--   <div class="tip">
     如果点击无法唤起 App：<br/>
     1. 请用 <strong>Safari</strong> 打开此页面<br/>
     2. <strong>长按下方链接</strong>，选择 “在 App 中打开”<br/>
     3. 或 <strong>复制链接</strong> 手动粘贴到 Safari 打开
-  </div>
+  </div> -->
 
   <div style="margin-top: 30px;">
-    <a id="rawLink" href="https://earnest-alpaca-0704f0.netlify.app/product/12345?route=lbank://temp" style="word-break: break-all;">
-      https://earnest-alpaca-0704f0.netlify.app/product/12345
+    <a id="rawLink" href="https://earnest-alpaca-0704f0.netlify.app/login?route=lbank://temp" style="display:inline-block; padding:12px 24px; background-color:#2106F3; color:white; text-decoration:none; border-radius:6px; font-size:26px;">
+      点击打开App login
     </a>
   </div>
 
-  <script>
+<!--   <script>
     const BASE_URL = "https://earnest-alpaca-0704f0.netlify.app/product/12345";
 
     document.getElementById("openAppLink").addEventListener("click", function (e) {
@@ -70,10 +73,10 @@
       document.getElementById("rawLink").textContent = link;
       // 不阻止默认行为，继续跳转
     });
-  </script>
+  </script> -->
 
 
-<p>如果没有自动跳转，请手动点击下方按钮---Chrome上测试</p>
+<!-- <p>如果没有自动跳转，请手动点击下方按钮---Chrome上测试</p>
   <button onclick="window.location.href='applink://home'">打开 App scheme </button>
   <script>
     // iOS 15+ 不支持自动唤起 Scheme，只能用户点击
@@ -82,7 +85,9 @@
       window.location.href = "https://earnest-alpaca-0704f0.netlify.app/product/12345";
     }, 3000);
   </script>
-<p></p>
+<p></p> -->
+<p> 下面为URL Scheme的触发按钮 </p>
+
 
 <a href="applink://home" 
      style="display:inline-block; padding:12px 24px; background-color:#2196F3; color:white; text-decoration:none; border-radius:6px; font-size:26px;">打开首页</a>
