@@ -72,6 +72,18 @@
     });
   </script>
 
+
+<p>如果没有自动跳转，请手动点击下方按钮---Chrome上测试</p>
+  <button onclick="window.location.href='applink://home'">打开 App scheme </button>
+  <script>
+    // iOS 15+ 不支持自动唤起 Scheme，只能用户点击
+    setTimeout(function () {
+      // 失败 fallback
+      window.location.href = "https://earnest-alpaca-0704f0.netlify.app/product/12345";
+    }, 3000);
+  </script>
+<p></p>
+
 <a href="applink://home" 
      style="display:inline-block; padding:12px 24px; background-color:#2196F3; color:white; text-decoration:none; border-radius:6px; font-size:16px;">打开首页</a>
 <a href="applink://product1" 
