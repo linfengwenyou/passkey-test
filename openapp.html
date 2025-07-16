@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>正在打开 App...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f8f9fa;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .btn {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #2196F3;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>正在尝试打开 App...</h1>
+  <a class="btn" href="#" onclick="manualOpenApp()">手动打开 App</a>
+
+  <script>
+    const schemeURL = "applink://home?url=https://xxx.com/page&id=123"; // ← 你的 App Scheme
+    const fallbackURL = "https://earnest-alpaca-0704f0.netlify.app/index.html";                 // ← 未安装时跳转页面
+
+    // 尝试打开 App
+    const now = Date.now();
+    window.location.href = schemeURL;
+
+    // fallback 跳转（1.5 秒内没跳走就认为失败）
+    setTimeout(() => {
+      if (Date.now() - now < 1600) {
+        window.location.href = fallbackURL;
+      }
+    }, 1500);
+
+    // 手动点击跳转
+    function manualOpenApp() {
+      window.location.href = schemeURL;
+    }
+  </script>
+</body>
+</html>
