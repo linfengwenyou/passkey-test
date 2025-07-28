@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>URL Scheme 跳转测试</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007aff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>URL Scheme 跳转测试</h2>
+  <input id="schemeInput" type="text" placeholder="请输入 URL Scheme，例如 myapp://test" />
+  <button onclick="jumpToScheme()">跳转</button>
+
+  <script>
+    function jumpToScheme() {
+      const input = document.getElementById("schemeInput").value.trim();
+      if (!input) {
+        alert("请输入一个有效的 URL Scheme");
+        return;
+      }
+      // 发起跳转
+      window.location.href = input;
+    }
+  </script>
+
+<h1> 下面是常用的几个跳转 </h1>
+
+<h2> Lbank Scheme 跳转</h2>
+<a href="lbank://lbk.app/user/profile" 
+     style="display:inline-block; padding:12px 24px; background-color:#2196F3; color:white; text-decoration:none; border-radius:6px; font-size:26px;">lbank://lbk.app/user/profile</a>
+<a href="lbank://lbk.app/profile/security" 
+     style="display:inline-block; padding:12px 24px; background-color:#2146F3; color:white; text-decoration:none; border-radius:6px; font-size:26px;">lbank://lbk.app/profile/security</a>
+
+<a href="lbank://lbk.app/security/changePhone?type=1" 
+     style="display:inline-block; padding:12px 24px; background-color:#2156F3; color:white; text-decoration:none; border-radius:6px; font-size:26px;">lbank://lbk.app/security/changePhone?type=1</a>
+<a href="lbank://lbk.app/security/bindEmail" 
+     style="display:inline-block; padding:12px 24px; background-color:#2176F3; color:white; text-decoration:none; border-radius:6px; font-size:26px;">lbank://lbk.app/security/bindEmail</a>
+<a href="lbank://lbk.app/wallet/transferPage" 
+     style="display:inline-block; padding:12px 24px; background-color:#2186F3; color:white; text-decoration:none; border-radius:6px; font-size:26px;">lbank://lbk.app/wallet/transferPage</a>
+
+<a href="lbank://lbk.app/web?url=https://www.lbank.com/follow" 
+     style="display:inline-block; padding:12px 24px; background-color:#2196F3; color:white; text-decoration:none; border-radius:6px; font-size:26px;">lbank://lbk.app/web?url=https://www.lbank.com/follow</a>
+
+
+
+
+
+</body>
+</html>
